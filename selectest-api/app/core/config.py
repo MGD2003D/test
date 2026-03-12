@@ -9,10 +9,7 @@ class Settings(BaseSettings):
         case_sensitive=False,
     )
 
-    database_url: str = Field(
-        "postgresql+asyncpg://postgres:postgres@db:5432/postgres_typo",
-        validation_alias="DATABSE_URL",
-    )
+    database_url: str = Field(validation_alias="DATABASE_URL")
     log_level: str = "INFO"
     parse_schedule_minutes: int = 5
 
